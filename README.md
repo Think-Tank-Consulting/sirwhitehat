@@ -1,4 +1,4 @@
-# SirWhiteHat "Fail Forward"
+# SirWhiteHat
 ## [Explore my profile](https://think-tank-consulting.com/sirwhitehat/)
 ### Interactive Profile 
 -Interactive Profile 📄 using html, css and javascript. 
