@@ -120,6 +120,14 @@ body.scale-cv{
 .scale-cv .home__img{
   width: 90px;
   height: 90px;
+  /*--Added from main*/
+  background-image: url("../img/Me.jpg");
+  border-radius: 50%;
+  justify-self: center;
+  background-size: cover;
+  background-position: right;
+  animation: none;
+  /*--Added from main*/
 }
 
 .scale-cv .home__container{
@@ -179,12 +187,21 @@ body.scale-cv{
   column-gap: 2.5rem;
 }
 
+/*Added from main*/
+.resume{
+  background-color: var(--container-color);
+  background-image: none;
+  }
+  /*Added from main*/
 
 body{
   margin: 0 0 var(--header-height) 0;
   padding: 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  /*Added from main*/
+  background-image: url("../img/matrix.gif");
+  /*Added from main*/
   background-color: var(--body-color);
   color: var(--text-color);
 }
@@ -266,7 +283,10 @@ img{
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
+    /*Changed from main to --text-color
     background-color: var(--body-color);
+    */
+    background-color: var(--text-color);
     box-shadow: 0 1px 4px rgba(0,0,0,.1);
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
@@ -335,6 +355,7 @@ img{
   text-align: center;
 }
 
+/*Removed from main
 .home__img{
   background-image: url("../img/Me.jpg");
   width: 120px;
@@ -344,6 +365,7 @@ img{
   margin-bottom: var(--mb-1);
   background-size: contain;
 }
+*/
 
 .home__img:hover {
   background-image: url("../img/Me2.jpg");
@@ -353,14 +375,72 @@ img{
   justify-self: center;
   margin-bottom: var(--mb-1);
   background-size: cover;
-  border-color: Red;
-  box-shadow: 0 5px 15px Red;
+  border-color: #ffffff;
+  box-shadow: 0 5px 15px hsl(128, 97%, 51%), 0 5px 15px #000000;
   cursor: not-allowed;
+  /*Added from main*/
+  animation: picHover infinite;
+  /*Added from main*/
+}
+
+/*Added from main*/
+.home__img{
+  background-image: url("../img/skate.gif");
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  justify-self: center;
+  background-size: cover;
+  background-position: right;
+  animation: slide 20s infinite;
+}
+
+@picHover{
+
+}
+
+@keyframes slide{
+  25%{
+    background-image: url("../img/time.gif");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    background-size: 130%;
+    background-position: left;
+  }
+  50%{
+    background: url("../img/montage.gif");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    background-size: 150%;
+  }
+  75%{
+    background: url("../img/keyboard.gif");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    background-size: cover;
+    background-position: right
+
+  }
+  100%{
+    background: url("../img/guitar.gif");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    background-size: cover;
+  }
 }
 
 .home__title{
   font-size: var(--h1-font-size);
   text-decoration: underline;
+  color: hwb(129 8% 27% / 0.99);
 }
 
 .home__profession{
@@ -375,6 +455,13 @@ img{
 .home__profession:hover .home__profession{
   display: none;
   cursor: pointer;
+}
+
+/*Added from main
+Controls the enlargening and color changing of the experience sections when you hover over them*/
+.experience__data:hover {
+  font-size: var(--h3-font-size);
+  color: rgb(246, 140, 0);
 }
 
 .home__profession:hover .home__profession-hidden{
@@ -593,6 +680,13 @@ color: var(--title-color);
 /*========== MEDIA QUERIES ==========*/
   /* For small devices, menu two columns */
 @media screen and (max-width: 600px){
+
+  /*Added from main*/
+  body{
+    background-image: none;
+  }
+  /*Added from main*/
+
   .nav__list{
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem .5rem;
@@ -608,7 +702,81 @@ color: var(--title-color);
     cursor: pointer;
   }
 
+  /*Added from main*/
+  .home__img:hover {
+    background-image: url("../img/Me.jpg");
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    justify-self: center;
+    margin-bottom: var(--mb-1);
+    background-size: cover;
+    border-color: #00ff03;
+    box-shadow: 0 5px 15px #ffffff, 0 5px 15px #000000;
+    cursor: not-allowed;
+    animation: picHover infinite;
+  }
 
+  .home__img{
+    background-image: url("../img/Lion.jpg");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+    background-size: cover;
+    background-position:90% 10%;
+    animation: slide 20s infinite;
+  }
+
+  .resume{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    background-color: var(--container-color);
+    background-image: none;
+    box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+  }
+
+  @picHover{
+
+  }
+
+  @keyframes slide{
+    25%{
+      background-image: url("../img/Me.jpg");
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      justify-self: center;
+      background-size: 130%;
+      background-position: left bottom;
+    }
+    50%{
+      background: url("../img/Me.jpg");
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      justify-self: center;
+      background-size: 150%;
+    }
+    75%{
+      background: url("../img/Me2.jpg");
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      justify-self: center;
+      background-size: cover;
+      background-position: right
+
+    }
+    100%{
+      background: url("../img/Me.jpg");
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      justify-self: center;
+      background-size: cover;
+    }
+  }
 
 }
 
