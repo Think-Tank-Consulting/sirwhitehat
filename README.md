@@ -1,4 +1,4 @@
-# SirWhiteHat - The depth of your despair shall determine the height of your success
+# SirWhiteHat "Fail Forward"
 ## [Explore my profile](https://think-tank-consulting.com/sirwhitehat/)
 ### Interactive Profile 
 -Interactive Profile 📄 using html, css and javascript. 
