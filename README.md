@@ -5,4 +5,4 @@ Beautiful Responsive Interactive Resume 📄 using html, css and javascript. Lig
 
 [Check Me Out On LinkedIn](https://www.linkedin.com/in/SirWhiteHat/)
 
-![Resume cv](/preview.png)
+![Preview](/preview.png)
