@@ -7,6 +7,8 @@
 
 -PDF Export
 
+-Motivation
+
 -Mobile Support
 
 [Check Me Out On LinkedIn](https://www.linkedin.com/in/SirWhiteHat/)
